@@ -430,7 +430,7 @@ ToggleButton.Parent = ScreenGui
 
 -- Обработчик нажатия на кнопку
 ToggleButton.MouseButton1Click:Connect(function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Astrail5258/Tsb/Scripts/AstraForButton.lua'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Astrail5258/Tsb/Scripts/AstraHubMain.lua'))()
 end)
 if game.PlaceId == 10449761463 then
     createScript()
