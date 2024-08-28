@@ -1,10 +1,10 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local colors = {
-    SchemeColor = Color3.fromRGB(0, 0, 0), 
+    SchemeColor = Color3.fromRGB(20, 20, 20), 
     Background = Color3.fromRGB(0, 0, 0), 
     Header = Color3.fromRGB(0, 0, 0), 
     TextColor = Color3.fromRGB(160, 36, 240), 
-    ElementColor = Color3.fromRGB(0, 0, 0)
+    ElementColor = Color3.fromRGB(15, 15, 15)
 }
 local Window = Library.CreateLib("Astra hub | by astrail | The strongest battlegrounds", colors)
 local CustomCharacters = Window:NewTab("Custom Movesets")
