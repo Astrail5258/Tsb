@@ -1,9 +1,9 @@
-local ScreenGui2 = Instance.new("ScreenGui2")
+local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local TitleLabel = Instance.new("TextLabel")
 
-ScreenGui2.Name = "UI"
-ScreenGui2.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.Name = "UI"
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
 Frame.Size = UDim2.new(0.8, 0, 0.6, 0)
 Frame.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -32,7 +32,7 @@ Button.TextSize = 24
 Button.Parent = Frame
 
 Button.MouseButton1Click:Connect(function()
-    ScreenGui2:Destroy()
+    ScreenGui:Destroy()
     loadstring(game:HttpGet("https://githubusercontent.com/Astrail5258/Tsb/Scripts/AstraHubMain"))()
 end)
 
