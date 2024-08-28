@@ -3,7 +3,7 @@ local colors = {
     SchemeColor = Color3.fromRGB(30, 30, 30), 
     Background = Color3.fromRGB(0, 0, 0), 
     Header = Color3.fromRGB(0, 0, 0), 
-    TextColor = Color3.fromRGB(255, 255, 255), 
+    TextColor = Color3.fromRGB(160, 36, 240), 
     ElementColor = Color3.fromRGB(20, 20, 20)
 }
 local Window = Library.CreateLib("Astra hub | by astrail | The strongest battlegrounds", colors)
