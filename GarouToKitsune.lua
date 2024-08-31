@@ -274,7 +274,8 @@ Anim:AdjustSpeed(1)
 Anim.TimePosition = startTime
 
 Anim:AdjustSpeed(2)
-
+        
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Astrail5258/Tsb/Scripts/AgonySlamCutscene.lua"))()
 
     end
 
