@@ -36,11 +36,11 @@ local function updateBarColor()
     local imageLabel = barFrame:FindFirstChild("Bar")
     if not imageLabel or not imageLabel:IsA("ImageLabel") then return end
 
-    -- Set initial color to yellow
+    -- Set initial color to light cyan
     imageLabel.ImageColor3 = Color3.fromRGB(125, 249, 255) -- Red
 
-    -- Smooth transition from Red to Dark Red
-    tweenColor(imageLabel, Color3.fromRGB(125, 249, 255), Color3.fromRGB(125, 249, 255), 2)
+    -- Smooth transition from light cyan to white
+    tweenColor(imageLabel, Color3.fromRGB(125, 249, 255), Color3.fromRGB(255, 255, 255), 2)
 end
 
 -- Check the GUI again when the character resets
