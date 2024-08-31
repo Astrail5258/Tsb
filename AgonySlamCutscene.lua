@@ -5,11 +5,9 @@ character.HumanoidRootPart.CFrame = character.HumanoidRootPart.CFrame * CFrame.n
 
 -- Get player and camera references
 local player = game.Players.LocalPlayer
-local camera = game.Workspace.CurrentCamera
 
 -- Duration and settings for the cutscene
 local cutsceneDuration = 1
-local spinSpeed = 360 -- degrees per second
 
 -- Function to perform the spinning cutscene
 local function startCutscene()
@@ -19,17 +17,15 @@ local function startCutscene()
     while tick() < endTime do
         -- Calculate the elapsed time and rotation angle
         local elapsedTime = tick() - startTime
-        local angle = spinSpeed * elapsedTime
+    
 
         -- Apply the rotation to the camera
-        camera.CFrame = camera.CFrame * CFrame.Angles(0, math.rad(spinSpeed * tick() - startTime), 0)
 
         -- Yield to the next frame
         wait()
     end
 
     -- Reset the camera's CFrame to the original state (optional)
-    camera.CFrame = CFrame.new(camera.CFrame.Position, camera.CFrame.Position + camera.CFrame.LookVector)
 end
 
 -- Start the cutscene when the script runs
