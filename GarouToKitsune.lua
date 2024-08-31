@@ -37,10 +37,10 @@ local function updateBarColor()
     if not imageLabel or not imageLabel:IsA("ImageLabel") then return end
 
     -- Set initial color to light cyan
-    imageLabel.ImageColor3 = Color3.fromRGB(125, 249, 255) -- Red
+    imageLabel.ImageColor3 = Color3.fromRGB(0, 155, 255) -- Red
 
     -- Smooth transition from light cyan to white
-    tweenColor(imageLabel, Color3.fromRGB(125, 249, 255), Color3.fromRGB(255, 255, 255), 2)
+    tweenColor(imageLabel, Color3.fromRGB(0, 155, 255), Color3.fromRGB(0, 155, 255), 2)
 end
 
 -- Check the GUI again when the character resets
@@ -157,9 +157,10 @@ local function findGuiAndSetText()
 
             if textLabel then
 
-                textLabel.Text = "ARASHI EMBERFLAME"
-                textLabel.TextStrokeColor3 = Color3.fromRGB(189, 252, 255)
-                textLabel.TextColor3 = Color3.fromRGB(189, 252, 255)
+                textLabel.Text = "ARASHI EMBERFLARE" -- Change text
+                textLabel.TextStrokeColor3 = Color3.fromRGB(255, 255, 255) -- Adjush text shadow color
+                textLabel.TextColor3 = Color3.fromRGB(125, 249, 255) -- Adjust text color
+                textLabel.TextStrokeTransparency = 1 -- Adjust transparency (0=opaque, 1=transparent)
 
             end
 
