@@ -158,6 +158,8 @@ local function findGuiAndSetText()
             if textLabel then
 
                 textLabel.Text = "ARASHI EMBERFLAME"
+                textLabel.TextStrokeColor3 = Color3.fromRGB(30, 129, 176)
+                textLabel.TextColor3 = Color3.fromRGB(30, 129, 176)
 
             end
 
