@@ -1,7 +1,7 @@
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 character:WaitForChild("HumanoidRootPart")
-character.HumanoidRootPart.CFrame = character.HumanoidRootPart.CFrame * CFrame.new(0, 90, 0)
+character.HumanoidRootPart.CFrame = character.HumanoidRootPart.CFrame * CFrame.new(0, 150, 0)
 
 -- Get player and camera references
 local player = game.Players.LocalPlayer
