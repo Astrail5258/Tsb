@@ -159,8 +159,8 @@ local function findGuiAndSetText()
 
                 textLabel.Text = "ARASHI EMBERFLARE" -- Change text
                 textLabel.TextStrokeColor3 = Color3.fromRGB(255, 255, 255) -- Adjush text shadow color
-                textLabel.TextColor3 = Color3.fromRGB(125, 249, 255) -- Adjust text color
-                textLabel.TextStrokeTransparency = 1 -- Adjust transparency (0=opaque, 1=transparent)
+                textLabel.TextColor3 = Color3.fromRGB(255, 255, 255) -- Adjust text color
+                textLabel.TextStrokeTransparency = 0 -- Adjust transparency (0=opaque, 1=transparent)
 
             end
 
