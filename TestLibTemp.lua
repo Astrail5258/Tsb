@@ -1,5 +1,5 @@
 -- LocalScript in StarterPlayerScripts to use the GUI library
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Astrail5258/Tsb/Scripts/TestLib.lua"))()
+local GUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Astrail5258/Tsb/Scripts/TestLib.lua"))()
 
 -- Create a background frame with the Sea theme
 local mainFrame = GUI.CreateFrame(nil, UDim2.new(0, 400, 0, 500), nil, "Sea")
