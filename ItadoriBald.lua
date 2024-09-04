@@ -504,8 +504,6 @@ Anim:AdjustSpeed(0.10)
         
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Astrail5258/Tsb/Scripts/WorldCutting.lua"))()
         
-wait(7)
-        
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Astrail5258/Tsb/Scripts/ItadoriNameBack.lua"))()
         
     end
@@ -624,8 +622,6 @@ Anim:AdjustSpeed(0.2)
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Astrail5258/Tsb/Scripts/Fuga.lua"))()
 
-wait(7)
-        
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Astrail5258/Tsb/Scripts/ItadoriNameBack.lua"))()
         
     end
@@ -687,8 +683,6 @@ wait(0)
 
 Anim:AdjustSpeed(1)
 
-wait(3)
-        
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Astrail5258/Tsb/Scripts/ItadoriNameBack.lua"))()
         
     end
@@ -741,7 +735,9 @@ Anim:AdjustSpeed(1)
 Anim.TimePosition = startTime
 
 Anim:AdjustSpeed(1)
+        
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Astrail5258/Tsb/Scripts/UltimateItadori.lua"))()
+        
     end
 
 end
