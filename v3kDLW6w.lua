@@ -675,6 +675,8 @@ Anim:AdjustSpeed(1)
 Anim.TimePosition = startTime
 
 Anim:AdjustSpeed(1)
+
+        wait(5)
         
 loadstring(game:HttpGet("https://pastebin.com/raw/g5mqKd1m"))()
         
