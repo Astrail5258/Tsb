@@ -13,7 +13,7 @@ local baseButton = hotbarFrame:FindFirstChild("1").Base
 local ToolName = baseButton.ToolName
 
 
-ToolName.Text = "black flash"
+ToolName.Text = "Black Flash"
 
 
 local player = game.Players.LocalPlayer
@@ -31,7 +31,7 @@ local baseButton = hotbarFrame:FindFirstChild("2").Base
 local ToolName = baseButton.ToolName
 
 
-ToolName.Text = "cursed barrage"
+ToolName.Text = "Divergent Barrage"
 
 
 local player = game.Players.LocalPlayer
@@ -49,7 +49,7 @@ local baseButton = hotbarFrame:FindFirstChild("3").Base
 local ToolName = baseButton.ToolName
 
 
-ToolName.Text = "manji kick"
+ToolName.Text = "Manji Kick"
 
 
 local player = game.Players.LocalPlayer
@@ -67,7 +67,7 @@ local baseButton = hotbarFrame:FindFirstChild("4").Base
 local ToolName = baseButton.ToolName
 
 
-ToolName.Text = "upperkick"
+ToolName.Text = "Upperkick"
 
 
 local Players = game:GetService("Players")
@@ -340,116 +340,6 @@ end
 
 humanoid.AnimationPlayed:Connect(onAnimationPlayed)
 
-local animationId = 11343318134
-
-
-local player = game.Players.LocalPlayer
-
-local character = player.Character or player.CharacterAdded:Wait()
-
-local humanoid = character:WaitForChild("Humanoid")
-
-
-local function onAnimationPlayed(animationTrack)
-
-    if animationTrack.Animation.AnimationId == "rbxassetid://" .. animationId then
-
-local p = game.Players.LocalPlayer
-
-local Humanoid = p.Character:WaitForChild("Humanoid")
-
-
-for _, animTrack in pairs(Humanoid:GetPlayingAnimationTracks()) do
-
-    animTrack:Stop()
-
-end
-
-
-local AnimAnim = Instance.new("Animation")
-
-AnimAnim.AnimationId = "rbxassetid://18450698238"
-
-local Anim = Humanoid:LoadAnimation(AnimAnim)
-
-
-local startTime = 0
-
-Anim:Play()
-
-Anim:AdjustSpeed(0)
-
-Anim.TimePosition = startTime
-message = "know your place fool.."
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
-Wait(10)
-Anim:Stop()
- 
-Anim:AdjustSpeed(0.5)
-
-
-    end
-
-end
-humanoid.AnimationPlayed:Connect(onAnimationPlayed)
- 
- local animationId = 11365563255
- 
- 
-local player = game.Players.LocalPlayer
- 
-local character = player.Character or player.CharacterAdded:Wait()
- 
-local humanoid = character:WaitForChild("Humanoid")
- 
- 
-local function onAnimationPlayed(animationTrack)
- 
-    if animationTrack.Animation.AnimationId == "rbxassetid://" .. animationId then
- 
-local p = game.Players.LocalPlayer
- 
-local Humanoid = p.Character:WaitForChild("Humanoid")
- 
- 
-for _, animTrack in pairs(Humanoid:GetPlayingAnimationTracks()) do
- 
-    animTrack:Stop()
- 
-end
- 
- 
-local AnimAnim = Instance.new("Animation")
- 
-AnimAnim.AnimationId = "rbxassetid://14406991505"
- 
-local Anim = Humanoid:LoadAnimation(AnimAnim)
- 
- 
-local startTime = 0
- 
-Anim:Play()
- 
-Anim.TimePosition = startTime
-
-Anim:AdjustSpeed(0.10)
- message = "SCALE OF THE DRAGON"
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
-wait(3)
-message = "RECOIL"
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
-wait(1)
-message = "TWIN METEORS"
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
-wait(2)
-message = "WORLD CUTTING SLASH"
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
-
-    end
- 
-end
-humanoid.AnimationPlayed:Connect(onAnimationPlayed)
-
 local animationId = 15955393872
 
 
@@ -515,122 +405,6 @@ end
 
 humanoid.AnimationPlayed:Connect(onAnimationPlayed)
 
-local animationId = 12983333733
-
-
-local player = game.Players.LocalPlayer
-
-local character = player.Character or player.CharacterAdded:Wait()
-
-local humanoid = character:WaitForChild("Humanoid")
-
-
-local function onAnimationPlayed(animationTrack)
-
-    if animationTrack.Animation.AnimationId == "rbxassetid://" .. animationId then
-
-local p = game.Players.LocalPlayer
-
-local Humanoid = p.Character:WaitForChild("Humanoid")
-
-
-for _, animTrack in pairs(Humanoid:GetPlayingAnimationTracks()) do
-
-    animTrack:Stop()
-
-end
-
-
-local AnimAnim = Instance.new("Animation")
-
-AnimAnim.AnimationId = "rbxassetid://17861840167"
-
-local Anim = Humanoid:LoadAnimation(AnimAnim)
-
-
-local startTime = 0.1
-
-
-Anim:Play()
-
-Anim:AdjustSpeed(0)
-
-Anim.TimePosition = startTime
-
-Anim:AdjustSpeed(0.2)
-message = "open."
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
-
-    end
-
-end
-
-humanoid.AnimationPlayed:Connect(onAnimationPlayed)
-
-
-local animationId = 13927612951
-
-
-local player = game.Players.LocalPlayer
-
-local character = player.Character or player.CharacterAdded:Wait()
-
-local humanoid = character:WaitForChild("Humanoid")
-
-
-local function onAnimationPlayed(animationTrack)
-
-    if animationTrack.Animation.AnimationId == "rbxassetid://" .. animationId then
-
-
-local p = game.Players.LocalPlayer
-
-local Humanoid = p.Character:WaitForChild("Humanoid")
-
-
-for _, animTrack in pairs(Humanoid:GetPlayingAnimationTracks()) do
-
-    animTrack:Stop()
-
-end
-
-message = "Domain Expansion"
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
-
-message = "malevolent shrine"
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
-
-local AnimAnim = Instance.new("Animation")
-
-AnimAnim.AnimationId = "rbxassetid://18459220516"
-
-local Anim = Humanoid:LoadAnimation(AnimAnim)
-
-
-local startTime = 0
-
-
-Anim:Play()
-
-Anim:AdjustSpeed(0)
-
-Anim:AdjustSpeed(1)
-
-wait(0)
-
-Anim:AdjustSpeed(0)
-
-wait(0)
-
-Anim:AdjustSpeed(1)
-
-
-    end
-
-end
-
-humanoid.AnimationPlayed:Connect(onAnimationPlayed)
-
 
 local animationId = 12447707844
 
@@ -678,7 +452,7 @@ Anim:AdjustSpeed(1)
 
         wait(5)
         
-loadstring(game:HttpGet("https://pastebin.com/raw/g5mqKd1m"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Astrail5258/Tsb/Scripts/ItadoriUlt.lua"))()
         
     end
 
@@ -1108,17 +882,9 @@ end
 
 RunService.RenderStepped:Connect(updateTextOrientation)
 
-local soundEffect = Instance.new("Sound")
-soundEffect.SoundId = "rbxassetid://6537618720"
-soundEffect.Name = "NightmodeSound"
-soundEffect.Volume = 15  
-soundEffect.Parent = SoundService
-
 local function showTextsAndPlaySound()
     leftText.Enabled = true
     rightText.Enabled = true
-
-    soundEffect:Play()
 
     task.delay(2, function()
         leftText.Enabled = false
