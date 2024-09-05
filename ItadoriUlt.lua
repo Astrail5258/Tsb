@@ -148,7 +148,8 @@ Anim:Stop()
  
 Anim:AdjustSpeed(0.5)
 
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Astrail5258/Tsb/Scripts/ItadoriNameBack.lua"))()
+        
     end
 
 end
@@ -207,6 +208,8 @@ wait(2)
 message = "WORLD CUTTING SLASH!"
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Astrail5258/Tsb/Scripts/ItadoriNameBack.lua"))()
+        
     end
  
 end
@@ -259,6 +262,8 @@ Anim:AdjustSpeed(0.2)
 message = "Open."
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Astrail5258/Tsb/Scripts/ItadoriNameBack.lua"))()
+        
     end
 
 end
@@ -322,7 +327,8 @@ wait(0)
 
 Anim:AdjustSpeed(1)
 
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Astrail5258/Tsb/Scripts/ItadoriNameBack.lua"))()
+        
     end
 
 end
