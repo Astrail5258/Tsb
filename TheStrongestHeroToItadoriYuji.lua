@@ -67,7 +67,7 @@ local baseButton = hotbarFrame:FindFirstChild("4").Base
 local ToolName = baseButton.ToolName
 
 
-ToolName.Text = "UpperKick"
+ToolName.Text = "Upperkick"
 
 
 local Players = game:GetService("Players")
@@ -401,7 +401,7 @@ Anim:Play()
 Anim:AdjustSpeed(0)
 
 Anim.TimePosition = startTime
-message = "know your place fool.."
+message = "Know your place, fool..."
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
 Wait(10)
 Anim:Stop()
@@ -455,16 +455,16 @@ Anim:Play()
 Anim.TimePosition = startTime
 
 Anim:AdjustSpeed(0.10)
- message = "SCALE OF THE DRAGON"
+ message = "Scale of the dragon."
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
 wait(3)
-message = "RECOIL"
+message = "Recoil."
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
 wait(1)
-message = "TWIN METEORS"
+message = "Twin meteors."
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
 wait(2)
-message = "WORLD CUTTING SLASH"
+message = "WORLD CUTTING SLASH!"
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
 
 loadstring(game:HttpGet('https://pastebin.com/raw/JKBEpaQW'))()
