@@ -474,7 +474,7 @@ Anim:Stop()
  
 Anim:AdjustSpeed(0.5)
 
-loadstring(game:HttpGet('https://pastebin.com/raw/JKBEpaQW'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Astrail5258/Tsb/Scripts/ItadoriNameBack.lua'))()
 
     end
 
@@ -533,7 +533,7 @@ wait(2)
 message = "WORLD CUTTING SLASH!"
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
 
-loadstring(game:HttpGet('https://pastebin.com/raw/JKBEpaQW'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Astrail5258/Tsb/Scripts/ItadoriNameBack.lua'))()
 
     end
  
@@ -648,10 +648,10 @@ Anim:AdjustSpeed(0)
 Anim.TimePosition = startTime
 
 Anim:AdjustSpeed(0.2)
-message = "open."
+message = "Fūga."
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
 
-loadstring(game:HttpGet('https://pastebin.com/raw/JKBEpaQW'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Astrail5258/Tsb/Scripts/ItadoriNameBack.lua'))()
 
     end
 
@@ -686,10 +686,10 @@ for _, animTrack in pairs(Humanoid:GetPlayingAnimationTracks()) do
 
 end
 
-message = "Domain Expansion"
+message = "Domain Expansion..."
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
 
-message = "malevolent shrine"
+message = "MALEVOLENT SHRINE!"
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
 
 local AnimAnim = Instance.new("Animation")
@@ -716,7 +716,7 @@ wait(0)
 
 Anim:AdjustSpeed(1)
 
-loadstring(game:HttpGet('https://pastebin.com/raw/JKBEpaQW'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Astrail5258/Tsb/Scripts/ItadoriNameBack.lua'))()
 
     end
 
@@ -771,7 +771,7 @@ Anim:AdjustSpeed(1)
 
 wait(1)
 
-loadstring(game:HttpGet('https://pastebin.com/raw/9a4ne4t6'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Astrail5258/Tsb/Scripts/ItadoriUlt.lua'))()
 
     end
 
@@ -1246,60 +1246,3 @@ local function onAnimationTrackStarted(track)
 end
 
 humanoid.AnimationPlayed:Connect(onAnimationTrackStarted)
-
-local screenGui = Instance.new("ScreenGui")
-screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-
--- function to create text with offsets for thickness
-local function createTextLayer(parent, offsetX, offsetY, color)
-    local textLayer = Instance.new("TextLabel")
-    textLayer.Parent = parent
-    textLayer.Size = UDim2.new(0, 300, 0, 50)  -- adjust the size of za text
-    textLayer.Position = UDim2.new(0.5, -150 + offsetX, 0.2, offsetY)  -- apply offsets
-    textLayer.AnchorPoint = Vector2.new(0.5, 0.5)  -- centert za text
-    textLayer.Text = "credits to tp exploit on discord"
-    textLayer.TextColor3 = color  -- color for za layer
-    textLayer.TextSize = 25
-    textLayer.Font = Enum.Font.IndieFlower  -- setting font to Indie Flower
-    textLayer.BackgroundTransparency = 1  -- transparent for za background
-    textLayer.ZIndex = 1
-    return textLayer
-end
-
--- thickness (blackoutline dudeshit)
-createTextLayer(screenGui, -1, -1, Color3.new(0, 0, 0)) -- Top-left
-createTextLayer(screenGui, 1, -1, Color3.new(0, 0, 0))  -- Top-right
-createTextLayer(screenGui, -1, 1, Color3.new(0, 0, 0))  -- Bottom-left
-createTextLayer(screenGui, 1, 1, Color3.new(0, 0, 0))   -- Bottom-right
-
--- creating za main text for credititing
-local textLabel = createTextLayer(screenGui, 0, 0, Color3.new(1, 1, 1)) -- whit main text
-textLabel.ZIndex = 2  -- main text is on topcreating a skibidi screenui
-local screenGui = Instance.new("ScreenGui")
-screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-
--- function to create text with offsets for thickness
-local function createTextLayer(parent, offsetX, offsetY, color)
-    local textLayer = Instance.new("TextLabel")
-    textLayer.Parent = parent
-    textLayer.Size = UDim2.new(0, 300, 0, 50)  -- adjust the size of za text
-    textLayer.Position = UDim2.new(0.5, -150 + offsetX, 0.2, offsetY)  -- apply offsets
-    textLayer.AnchorPoint = Vector2.new(0.5, 0.5)  -- centert za text
-    textLayer.Text = "credits to tp exploit on discord"
-    textLayer.TextColor3 = color  -- color for za layer
-    textLayer.TextSize = 25
-    textLayer.Font = Enum.Font.IndieFlower  -- setting font to Indie Flower
-    textLayer.BackgroundTransparency = 1  -- transparent for za background
-    textLayer.ZIndex = 1
-    return textLayer
-end
-
--- thickness (blackoutline dudeshit)
-createTextLayer(screenGui, -1, -1, Color3.new(0, 0, 0)) -- Top-left
-createTextLayer(screenGui, 1, -1, Color3.new(0, 0, 0))  -- Top-right
-createTextLayer(screenGui, -1, 1, Color3.new(0, 0, 0))  -- Bottom-left
-createTextLayer(screenGui, 1, 1, Color3.new(0, 0, 0))   -- Bottom-right
-
--- creating za main text for credititing
-local textLabel = createTextLayer(screenGui, 0, 0, Color3.new(1, 1, 1)) -- whit main text
-textLabel.ZIndex = 2  -- main text is on top
