@@ -1,4 +1,4 @@
-loadstring(game:HttpGet('loadstring(game:HttpGet('https://raw.githubusercontent.com/Astrail5258/Tsb/Scripts/TheStrongestHeroToItadoriYuji.lua'))()'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Astrail5258/Tsb/Scripts/TheStrongestHeroToItadoriYuji.lua'))()
 
 task.wait(2)
 
