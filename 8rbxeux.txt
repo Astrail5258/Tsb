@@ -1,0 +1,507 @@
+ 
+
+
+
+
+
+
+local StarterGui = game:GetService("StarterGui")
+
+wait(2)
+StarterGui:SetCore("SendNotification", {
+  Title = "Limitless Legacy",
+  Text = "Made by W.is.p and nilauraz on Discord! ",
+  Button1 = "Alright!",
+  Duration = 10
+})
+
+
+
+
+local Players = game:GetService("Players")
+
+local localPlayer = Players.LocalPlayer
+
+local character = localPlayer.Character or localPlayer.CharacterAdded:Wait()
+
+local HumanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+local player = Players.LocalPlayer
+local character = player.Character
+
+local humanoid = character:WaitForChild("Humanoid")
+local animator = humanoid:WaitForChild("Animator")
+
+local redAnimation = Instance.new("Animation")
+redAnimation.AnimationId = "rbxassetid://18896127525"
+
+local redAnimationTrack = animator:LoadAnimation(redAnimation)
+
+local barrageAnimation = Instance.new("Animation")
+barrageAnimation.AnimationId = "rbxassetid://12273188754"
+
+local barrageAnimationTrack = animator:LoadAnimation(barrageAnimation)
+
+local shoveAnimation = Instance.new("Animation")
+shoveAnimation.AnimationId = "rbxassetid://12509505723"
+
+local shoveAnimationTrack = animator:LoadAnimation(shoveAnimation)
+
+local ultAnimation2 = Instance.new("Animation")
+ultAnimation2.AnimationId = "rbxassetid://15503060232"
+
+local ultAnimation2Track = animator:LoadAnimation(ultAnimation2)
+
+local ForwardDash = Instance.new("Animation")
+ForwardDash.AnimationId = "rbxassetid://17838006839"
+
+local ForwardDashTrack = animator:LoadAnimation(ForwardDash)
+
+local HollowPurple = Instance.new("Animation")
+HollowPurple.AnimationId = "rbxassetid://13071982935"
+
+local HollowPurpleTrack = animator:LoadAnimation(HollowPurple)
+
+local Uppercut = Instance.new("Animation")
+Uppercut.AnimationId = "rbxassetid://18179181663"
+
+local UppercutTrack = animator:LoadAnimation(Uppercut)
+
+local wallcombo = Instance.new("Animation")
+wallcombo.AnimationId = "rbxassetid://18903642853"
+
+local wallcomboTrack = animator:LoadAnimation(wallcombo)
+
+local ultAnimation3 = Instance.new("Animation")
+ultAnimation3.AnimationId = "rbxassetid://18897538537"
+
+local ultAnimation3Track = animator:LoadAnimation(ultAnimation3)
+
+local ultAnimation4 = Instance.new("Animation")
+ultAnimation4.AnimationId = "rbxassetid://18897534746"
+
+local ultAnimation4Track = animator:LoadAnimation(ultAnimation4)
+
+local Atmosphere = game.Lighting.Atmosphere
+
+local Domain = Instance.new("Animation")
+Domain.AnimationId = "rbxassetid://12351854556"
+
+local DomainTrack = animator:LoadAnimation(Domain)
+
+local Fallult = Instance.new("Animation")
+Fallult.AnimationId = "rbxassetid://16136144568"
+
+local FallultTrack = animator:LoadAnimation(Fallult)
+
+Atmosphere.Density = 0.3
+
+local tpAnim = Instance.new("Animation")
+tpAnim.AnimationId = "rbxassetid://15957361339"
+
+local tpAnimTrack = animator:LoadAnimation(tpAnim)
+
+local M1 = Instance.new("Animation")
+M1.AnimationId = "rbxassetid://17889458563"
+
+local M1Track = animator:LoadAnimation(M1)
+
+local M2 = Instance.new("Animation")
+M2.AnimationId = "rbxassetid://13532600125"
+
+local M2Track = animator:LoadAnimation(M2)
+
+local M3 = Instance.new("Animation")
+M3.AnimationId = "rbxassetid://13296577783"
+
+local M3Track = animator:LoadAnimation(M3)
+
+local M4 = Instance.new("Animation")
+M4.AnimationId = "rbxassetid://13378708199"
+
+local M4Track = animator:LoadAnimation(M4)
+
+local Ability1 = Instance.new("Sound")
+Ability1.SoundId = "rbxassetid://18169340129"
+
+
+
+local userInputService = game:GetService("UserInputService");
+function sendMessage(msg)
+    
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(tostring(msg), "All");
+end
+
+userInputService.InputBegan:Connect(function(input, gameProcessed)
+    if gameProcessed then return end;
+    local randomInput = math.random(1,2);
+    if input.KeyCode == Enum.KeyCode.G then
+        task.wait(9)
+        if randomInput == 1 then
+            sendMessage("Throughout heaven and earth,");
+            task.wait(1.5);
+            sendMessage("I alone am,");
+            task.wait(1.5);
+            sendMessage("The Honored One");
+
+        elseif randomInput == 2 then
+            sendMessage("It'll be fine,");
+            task.wait(1.5);
+            sendMessage("After all...");
+            task.wait(1.5);
+            sendMessage("You're weak");
+        end
+    end
+end)
+local plr = game.Players.LocalPlayer
+local char = plr.Character
+local Humanoid = char.Humanoid
+local hrp = char.HumanoidRootPart
+local hot = plr.PlayerGui:WaitForChild("Hotbar")
+local hotbar = hot:WaitForChild("Backpack"):WaitForChild("Hotbar")
+local RunService = game:GetService("RunService")
+local function cloneToolName(slot, text)
+    local toolName = slot.ToolName
+    if not slot:FindFirstChild("SkibidiGame") then
+        toolName.Visible = false
+        local clone = toolName:Clone()
+        clone.Name = "SkibidiGame"
+        clone.Parent = slot
+        clone.Text = text
+        clone.Visible = true
+    elseif slot:FindFirstChild("SkibidiGame") then
+        if slot:FindFirstChild("SkibidiGame").Text ~= text then
+            toolName.Visible = false
+            slot:FindFirstChild("SkibidiGame").Text = text
+        end
+    end
+end
+local airvariant = false
+
+char.AttributeChanged:Connect(function(attributename)
+    if attributename == "HoldingSpace" then
+        airvariant = char:GetAttribute(attributename)
+    end
+end)
+
+function Emit(Any)
+    task.wait(.001)
+    for _, Particles in pairs(Any:GetDescendants()) do
+        task.delay(Particles:GetAttribute("EmitDelay"), function()
+            if Particles:IsA('ParticleEmitter') then
+                Particles:Emit(Particles:GetAttribute("EmitCount"))
+            end
+            if Particles:GetAttribute("EmitDuration") then
+                if Particles:GetAttribute("EmitDuration") > 0 then
+                    task.defer(function()
+                        Particles.Enabled = true
+                        task.wait(Particles:GetAttribute("EmitDuration"))
+                        Particles.Enabled = false
+                    end)
+                end
+            else
+                if Particles:IsA("ParticleEmitter") then
+                    Particles:Emit(Particles:GetAttribute("EmitCount"))
+                end
+            end
+        end)
+    end
+end
+
+local magichealth = plr.PlayerGui:WaitForChild("ScreenGui"):WaitForChild("MagicHealth")
+local UltLabel = plr.PlayerGui:WaitForChild("ScreenGui"):WaitForChild("MagicHealth"):WaitForChild("TextLabel")
+UltLabel.Visible = false
+local UltLabel = UltLabel:Clone()
+UltLabel.Visible = true
+UltLabel.Name = "OnlyRizzlersKnowMeYuh"
+UltLabel.Parent = magichealth
+task.spawn(function()
+    while true do
+        UltLabel.Text = "Reverse Cursed Technique"
+        for _, slot in ipairs(hotbar:GetChildren()) do
+            if slot:FindFirstChild("Base") and slot.Base:FindFirstChild("ToolName") then
+                local toolNameText = slot.Base.ToolName.Text
+                if toolNameText == "Normal Punch" then
+                    cloneToolName(slot.Base, "Black Flash : コクセン")
+                elseif toolNameText == "Consecutive Punches" then
+                    cloneToolName(slot.Base, "Beatdown : ビートダウン")
+                elseif toolNameText == "Shove" then
+                    cloneToolName(slot.Base, "Blue : 撤回する")
+                elseif toolNameText == "Uppercut" then
+                    cloneToolName(slot.Base, "Reversal : 顎")
+                elseif toolNameText == "Death Counter" then
+                    cloneToolName(slot.Base, "Domain : 単純")
+                elseif toolNameText == "Table Flip" then
+                    cloneToolName(slot.Base, "Amplified : レイプ")
+                elseif toolNameText == "Serious Punch" then
+                    cloneToolName(slot.Base, "Murasaki : 黒人")
+                elseif toolNameText == "Omni Directional Punch" then
+                    cloneToolName(slot.Base, "Infinite : セックス")
+                end
+            end
+        end
+        task.wait(1)
+    end
+end)
+
+userInputService.InputBegan:Connect(function(input, gameProcessed)
+    if gameProcessed then return end;
+    if input.KeyCode == Enum.KeyCode.One then
+        getgenv().toggle = game:GetService("RunService").Heartbeat:connect(function()
+            for _,v in pairs(game:GetService("Players").LocalPlayer.Character.Humanoid:GetPlayingAnimationTracks()) do
+                 if v.Animation.AnimationId == "rbxassetid://10468665991" then
+                    Ability1:Play()
+                    v:Stop()
+                    redAnimationTrack:Play()
+                    task.wait(1)
+                    redAnimationTrack:Stop()
+                end
+            end
+        end)
+    end
+end)
+
+userInputService.InputBegan:Connect(function(input, gameProcessed)
+    if gameProcessed then return end;
+    if input.KeyCode == Enum.KeyCode.Two then
+        getgenv().toggle = game:GetService("RunService").Heartbeat:connect(function()
+            for _,v in pairs(game:GetService("Players").LocalPlayer.Character.Humanoid:GetPlayingAnimationTracks()) do
+                 if v.Animation.AnimationId == "rbxassetid://10466974800" then
+                    v:Stop()
+                    barrageAnimationTrack:Play()
+                end
+            end
+        end)
+    end
+end)  
+
+userInputService.InputBegan:Connect(function(input, gameProcessed)
+    if gameProcessed then return end;
+    if input.KeyCode == Enum.KeyCode.Three then
+        getgenv().toggle = game:GetService("RunService").Heartbeat:connect(function()
+            for _,v in pairs(game:GetService("Players").LocalPlayer.Character.Humanoid:GetPlayingAnimationTracks()) do
+                 if v.Animation.AnimationId == "rbxassetid://10471336737" then
+                    v:Stop()
+                    shoveAnimationTrack:Play()
+                end
+            end
+        end)
+    end
+end)      
+
+userInputService.InputBegan:Connect(function(input, gameProcessed)
+    if gameProcessed then return end;
+    if input.KeyCode == Enum.KeyCode.G then
+        getgenv().toggle = game:GetService("RunService").Heartbeat:connect(function()
+            for _,v in pairs(game:GetService("Players").LocalPlayer.Character.Humanoid:GetPlayingAnimationTracks()) do
+                 if v.Animation.AnimationId == "rbxassetid://12447707844" then
+                    v:Stop()
+                    ultAnimation4Track:Play()
+                    ultAnimation4Track:AdjustSpeed(1.5)
+                    task.wait(1)
+                    Soundult:Play()
+                    game.Players.LocalPlayer.Character.Humanoid.HipHeight = 0
+                    task.wait(0.1)
+                    game.Players.LocalPlayer.Character.Humanoid.HipHeight = 1
+                    task.wait(0.1)
+                    game.Players.LocalPlayer.Character.Humanoid.HipHeight = 2
+                    task.wait(0.1)
+                    game.Players.LocalPlayer.Character.Humanoid.HipHeight = 3
+                    task.wait(0.1)
+                    game.Players.LocalPlayer.Character.Humanoid.HipHeight = 4
+                    task.wait(0.1)
+                    game.Players.LocalPlayer.Character.Humanoid.HipHeight = 5
+                    ultAnimation3Track:Play()
+                    task.wait(0.1)
+                    game.Players.LocalPlayer.Character.Humanoid.HipHeight = 6
+                    task.wait(0.1)
+                    game.Players.LocalPlayer.Character.Humanoid.HipHeight = 7
+                    task.wait(0.1)
+                    game.Players.LocalPlayer.Character.Humanoid.HipHeight = 8
+                    task.wait(0.1)
+                    game.Players.LocalPlayer.Character.Humanoid.HipHeight = 9
+                    task.wait(0.1)
+                    game.Players.LocalPlayer.Character.Humanoid.HipHeight = 10
+                    task.wait(0.1)
+                    game.Players.LocalPlayer.Character.Humanoid.HipHeight = 11
+                    task.wait(0.1)
+                    game.Players.LocalPlayer.Character.Humanoid.HipHeight = 12
+                    task.wait(0.1)
+                    game.Players.LocalPlayer.Character.Humanoid.HipHeight = 13
+                    task.wait(0.1)
+                    game.Players.LocalPlayer.Character.Humanoid.HipHeight = 14
+                    task.wait(0.1)
+                    game.Players.LocalPlayer.Character.Humanoid.HipHeight = 15
+                    task.wait(0.1)
+                    game.Players.LocalPlayer.Character.Humanoid.HipHeight = 16
+                    task.wait(0.1)
+                    game.Players.LocalPlayer.Character.Humanoid.HipHeight = 17
+                    task.wait(0.1)
+                    game.Players.LocalPlayer.Character.Humanoid.HipHeight = 18
+                    task.wait(0.1)
+                    game.Players.LocalPlayer.Character.Humanoid.HipHeight = 19
+                    task.wait(0.1)
+                    game.Players.LocalPlayer.Character.Humanoid.HipHeight = 20
+                    task.wait(13)
+                    ultAnimation3Track:Stop()
+                    game.Players.LocalPlayer.Character.Humanoid.HipHeight = 0
+                    Soundult:Stop()
+                        end
+                    end
+                end)
+            end
+        end)
+
+
+    userInputService.InputBegan:Connect(function(input, gameProcessed)
+        if gameProcessed then return end;
+        if input.KeyCode == Enum.KeyCode.Q then
+            getgenv().toggle = game:GetService("RunService").Heartbeat:connect(function()
+                for _,v in pairs(game:GetService("Players").LocalPlayer.Character.Humanoid:GetPlayingAnimationTracks()) do
+                     if v.Animation.AnimationId == "rbxassetid://10479335397" then
+                        v:Stop()
+                        ForwardDashTrack:Play()
+                    end
+                end
+            end)
+        end
+    end)      
+
+    userInputService.InputBegan:Connect(function(input, gameProcessed)
+        if gameProcessed then return end;
+        if input.KeyCode == Enum.KeyCode.Three then
+            getgenv().toggle = game:GetService("RunService").Heartbeat:connect(function()
+                for _,v in pairs(game:GetService("Players").LocalPlayer.Character.Humanoid:GetPlayingAnimationTracks()) do
+                     if v.Animation.AnimationId == "rbxassetid://12983333733" then
+                        v:Stop()
+                        HollowPurpleTrack:Play()
+                        HollowPurpleTrack:AdjustSpeed(0.7)
+                    end
+                end
+            end)
+        end
+    end)      
+
+
+userInputService.InputBegan:Connect(function(input, gameProcessed)
+    if gameProcessed then return end;
+    if input.KeyCode == Enum.KeyCode.Four then
+        getgenv().toggle = game:GetService("RunService").Heartbeat:connect(function()
+            for _,v in pairs(game:GetService("Players").LocalPlayer.Character.Humanoid:GetPlayingAnimationTracks()) do
+                 if v.Animation.AnimationId == "rbxassetid://12510170988" then
+                    v:Stop()
+                    UppercutTrack:Play()
+                    UppercutTrack:AdjustSpeed(1.5)
+                end
+            end
+        end)
+    end
+end)      
+
+userInputService.InputBegan:Connect(function(input, gameProcessed)
+    if gameProcessed then return end;
+    if input.KeyCode == Enum.KeyCode.Q then
+        getgenv().toggle = game:GetService("RunService").Heartbeat:connect(function()
+            for _,v in pairs(game:GetService("Players").LocalPlayer.Character.Humanoid:GetPlayingAnimationTracks()) do
+                 if v.Animation.AnimationId == "rbxassetid://15955393872" then
+                    v:Stop()
+                    wallcomboTrack:Play()
+                    wallcomboTrack:AdjustSpeed(1.5)
+                end
+            end
+        end)
+    end
+end)      
+
+userInputService.InputBegan:Connect(function(input, gameProcessed)
+    if gameProcessed then return end;
+    if input.KeyCode == Enum.KeyCode.One then
+        getgenv().toggle = game:GetService("RunService").Heartbeat:connect(function()
+            for _,v in pairs(game:GetService("Players").LocalPlayer.Character.Humanoid:GetPlayingAnimationTracks()) do
+                 if v.Animation.AnimationId == "rbxassetid://11343318134" then
+                    v:Stop()
+                    DomainTrack:Play()
+                    DomainTrack:AdjustSpeed(0.1)
+                end
+            end
+        end)
+    end
+end)      
+  
+local tpAnim = Instance.new("Animation")
+tpAnim.AnimationId = "rbxassetid://15957361339"
+
+local tpAnimTrack = animator:LoadAnimation(tpAnim)
+
+local userInputService = game:GetService("UserInputService");
+
+userInputService.InputBegan:Connect(function(input, gameProcessed)
+    if gameProcessed then return end;
+    if input.KeyCode == Enum.KeyCode.T then
+        local Player = game:GetService('Players').LocalPlayer
+        local Mouse = Player:GetMouse()
+        local MousePos = Mouse.Hit.p
+        game.Players.LocalPlayer.Character:MoveTo(MousePos)
+        tpAnimTrack:Play()
+    end
+end)  
+
+userInputService.InputBegan:Connect(function(input, gameProcessed)
+    if gameProcessed then return end;
+    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+        getgenv().toggle = game:GetService("RunService").Heartbeat:connect(function()
+            for _,v in pairs(game:GetService("Players").LocalPlayer.Character.Humanoid:GetPlayingAnimationTracks()) do
+                 if v.Animation.AnimationId == "rbxassetid://10469493270" then
+                    v:Stop()
+                    M1Track:Play()
+                    M1Track:AdjustSpeed(1.5)
+                end
+            end
+        end)
+    end
+end)      
+
+userInputService.InputBegan:Connect(function(input, gameProcessed)
+    if gameProcessed then return end;
+    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+        getgenv().toggle = game:GetService("RunService").Heartbeat:connect(function()
+            for _,v in pairs(game:GetService("Players").LocalPlayer.Character.Humanoid:GetPlayingAnimationTracks()) do
+                 if v.Animation.AnimationId == "rbxassetid://10469630950" then
+                    v:Stop()
+                    M2Track:Play()
+                    M2Track:AdjustSpeed(2)
+                end
+            end
+        end)
+    end
+end)      
+
+userInputService.InputBegan:Connect(function(input, gameProcessed)
+    if gameProcessed then return end;
+    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+        getgenv().toggle = game:GetService("RunService").Heartbeat:connect(function()
+            for _,v in pairs(game:GetService("Players").LocalPlayer.Character.Humanoid:GetPlayingAnimationTracks()) do
+                 if v.Animation.AnimationId == "rbxassetid://10469639222" then
+                    v:Stop()
+                    M3Track:Play()
+                    M3Track:AdjustSpeed(1.7)
+                end
+            end
+        end)
+    end
+end)      
+
+userInputService.InputBegan:Connect(function(input, gameProcessed)
+    if gameProcessed then return end;
+    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+        getgenv().toggle = game:GetService("RunService").Heartbeat:connect(function()
+            for _,v in pairs(game:GetService("Players").LocalPlayer.Character.Humanoid:GetPlayingAnimationTracks()) do
+                 if v.Animation.AnimationId == "rbxassetid://10469643643" then
+                    v:Stop()
+                    M4Track:Play()
+                    M4Track:AdjustSpeed(1.5)
+                end
+            end
+        end)
+    end
+end)      
