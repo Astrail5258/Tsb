@@ -37,7 +37,7 @@ local function updateBarColor()
     if not imageLabel or not imageLabel:IsA("ImageLabel") then return end
 
     -- Set initial color to green
-    imageLabel.ImageColor3 = Color3.fromRGB(139, 0, 0) -- green
+    imageLabel.ImageColor3 = Color3.fromRGB(80, 200, 120) -- green
 
     -- Smooth transition from green to none
     tweenColor(imageLabel, Color3.fromRGB(80, 200, 120), Color3.fromRGB(80, 200, 120), 2)
@@ -324,7 +324,7 @@ Anim:AdjustSpeed(0)
 
 Anim.TimePosition = startTime
 
-Anim:AdjustSpeed(1)
+Anim:AdjustSpeed(0)
 
 
 delay(1.8, function()
@@ -786,13 +786,13 @@ local animationIdsToStop = {
 -- m1 replacement (change this one in order to btw)
 local replacementAnimations = {
 
-    ["10469643643"] = "rbxassetid://10469643643",
+    ["10469643643"] = "rbxassetid://16515503507",
 
-    ["10469639222"] = "rbxassetid://10469639222",
+    ["10469639222"] = "rbxassetid://16515520431",
 
-    ["10469630950"] = "rbxassetid://10469630950",
+    ["10469630950"] = "rbxassetid://16515448089",
 
-    ["10469493270"] = "rbxassetid://10469493270",
+    ["10469493270"] = "rbxassetid://16552234590",
 
 }
 
