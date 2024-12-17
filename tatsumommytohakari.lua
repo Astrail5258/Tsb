@@ -786,13 +786,14 @@ local animationIdsToStop = {
 -- m1 replacement (change this one in order to btw)
 local replacementAnimations = {
 
-    ["10469643643"] = "rbxassetid://16515503507",
 
-    ["10469639222"] = "rbxassetid://16515520431",
+    ["10469643643"] = "rbxassetid://17889290569",
 
-    ["10469630950"] = "rbxassetid://16515448089",
+    ["10469639222"] = "rbxassetid://17889471098",
 
-    ["10469493270"] = "rbxassetid://16552234590",
+    ["10469630950"] = "rbxassetid://17889461810",
+
+    ["10469493270"] = "rbxassetid://17889458563",
 
 }
 
