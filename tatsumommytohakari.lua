@@ -13,7 +13,7 @@ local baseButton = hotbarFrame:FindFirstChild("1").Base
 local ToolName = baseButton.ToolName
 
 
-ToolName.Text = "Tool name #1"
+ToolName.Text = "Slam Grab"
 
 
 local player = game.Players.LocalPlayer
@@ -31,7 +31,7 @@ local baseButton = hotbarFrame:FindFirstChild("2").Base
 local ToolName = baseButton.ToolName
 
 
-ToolName.Text = "tool name #2"
+ToolName.Text = "Lucky Volley"
 
 
 local player = game.Players.LocalPlayer
@@ -49,7 +49,7 @@ local baseButton = hotbarFrame:FindFirstChild("3").Base
 local ToolName = baseButton.ToolName
 
 
-ToolName.Text = "tool name #3"
+ToolName.Text = "Rock Stomp"
 
 
 local player = game.Players.LocalPlayer
@@ -67,7 +67,7 @@ local baseButton = hotbarFrame:FindFirstChild("4").Base
 local ToolName = baseButton.ToolName
 
 
-ToolName.Text = "tool name #4"
+ToolName.Text = "Diving Explosion"
 
 
 local Players = game:GetService("Players")
@@ -91,7 +91,7 @@ local function findGuiAndSetText()
 
             if textLabel then
 
-                textLabel.Text = "ULT NAME"
+                textLabel.Text = "JACKPOT"
 
             end
 
