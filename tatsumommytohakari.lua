@@ -1,3 +1,69 @@
+-- Services
+local Players = game:GetService("Players")
+local TweenService = game:GetService("TweenService")
+
+-- Local Player
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+-- Color tweening function
+local function tweenColor(imageLabel, startColor, endColor, duration)
+    local tweenInfo = TweenInfo.new(duration, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, -1, true)
+    local goal = {ImageColor3 = endColor}
+    local tween = TweenService:Create(imageLabel, tweenInfo, goal)
+    tween:Play()
+end
+
+-- GUI and color adjustment function
+local function updateBarColor()
+    -- Find the ScreenGui on the screen
+    local screenGui = playerGui:FindFirstChild("ScreenGui")
+    if not screenGui then return end
+
+    -- Find the MagicHealth Frame
+    local magicHealthFrame = screenGui:FindFirstChild("MagicHealth")
+    if not magicHealthFrame then return end
+
+    -- Find the Health Frame
+    local healthFrame = magicHealthFrame:FindFirstChild("Health")
+    if not healthFrame then return end
+
+    -- Find the Bar Frame
+    local barFrame = healthFrame:FindFirstChild("Bar")
+    if not barFrame then return end
+
+    -- Find the ImageLabel with ImageColor3 property inside the Bar Frame
+    local imageLabel = barFrame:FindFirstChild("Bar")
+    if not imageLabel or not imageLabel:IsA("ImageLabel") then return end
+
+    -- Set initial color to green
+    imageLabel.ImageColor3 = Color3.fromRGB(139, 0, 0) -- green
+
+    -- Smooth transition from green to none
+    tweenColor(imageLabel, Color3.fromRGB(80, 200, 120), Color3.fromRGB(80, 200, 120), 2)
+end
+
+-- Check the GUI again when the character resets
+local function onCharacterAdded(character)
+    -- Update the GUI
+    updateBarColor()
+end
+
+-- Check the local player's character
+local function onPlayerAdded()
+    local character = player.Character or player.CharacterAdded:Wait()
+    onCharacterAdded(character)
+
+    -- Check again when the character changes
+    player.CharacterAdded:Connect(onCharacterAdded)
+end
+
+-- Check when the player is added
+Players.PlayerAdded:Connect(onPlayerAdded)
+if player then
+    onPlayerAdded()
+end
+
 local player = game.Players.LocalPlayer
 
 local playerGui = player.PlayerGui
@@ -136,7 +202,7 @@ end
 --- 1ST MOVE
 local AnimAnim = Instance.new("Animation")
 
-AnimAnim.AnimationId = "rbxassetid://13603396939"
+AnimAnim.AnimationId = "rbxassetid://12309835105"
 
 local Anim = Humanoid:LoadAnimation(AnimAnim)
 
@@ -241,10 +307,10 @@ for _, animTrack in pairs(Humanoid:GetPlayingAnimationTracks()) do
 
 end
 
---- THRD MOVE
+--- THIRD MOVE
 local AnimAnim = Instance.new("Animation")
 
-AnimAnim.AnimationId = "rbxassetid://13294790250"
+AnimAnim.AnimationId = "rbxassetid://18896229321"
 
 local Anim = Humanoid:LoadAnimation(AnimAnim)
 
@@ -304,7 +370,7 @@ end
 -- FOURTH MOVE
 local AnimAnim = Instance.new("Animation")
 
-AnimAnim.AnimationId = "rbxassetid://18464372850"
+AnimAnim.AnimationId = "rbxassetid://12830917034"
 
 local Anim = Humanoid:LoadAnimation(AnimAnim)
 
@@ -355,7 +421,7 @@ end
 -- Ult 1st move
 local AnimAnim = Instance.new("Animation")
 
-AnimAnim.AnimationId = "rbxassetid://12983333733"
+AnimAnim.AnimationId = "rbxassetid://12467789963"
 
 local Anim = Humanoid:LoadAnimation(AnimAnim)
 
@@ -456,7 +522,7 @@ end
 --- ult second move
 local AnimAnim = Instance.new("Animation")
 
-AnimAnim.AnimationId = "rbxassetid://13073745835"
+AnimAnim.AnimationId = "rbxassetid://12510170988"
 
 local Anim = Humanoid:LoadAnimation(AnimAnim)
 
@@ -508,7 +574,7 @@ end
 --- activation ult
 local AnimAnim = Instance.new("Animation")
 
-AnimAnim.AnimationId = "rbxassetid://18435303746"
+AnimAnim.AnimationId = "rbxassetid://16528092313"
 
 local Anim = Humanoid:LoadAnimation(AnimAnim)
 
@@ -720,13 +786,13 @@ local animationIdsToStop = {
 -- m1 replacement (change this one in order to btw)
 local replacementAnimations = {
 
-    ["10469643643"] = "rbxassetid://17889290569",
+    ["10469643643"] = "rbxassetid://10469643643",
 
-    ["10469639222"] = "rbxassetid://17889471098",
+    ["10469639222"] = "rbxassetid://10469639222",
 
-    ["10469630950"] = "rbxassetid://17889461810",
+    ["10469630950"] = "rbxassetid://10469630950",
 
-    ["10469493270"] = "rbxassetid://17889458563",
+    ["10469493270"] = "rbxassetid://10469493270",
 
 }
 
