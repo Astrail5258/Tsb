@@ -101,3 +101,5 @@ end
 
 
 playerGui.DescendantAdded:Connect(findGuiAndSetText)
+
+findGuiAndSetText()
