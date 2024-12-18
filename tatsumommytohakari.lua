@@ -943,4 +943,123 @@ player.CharacterAdded:Connect(function(newCharacter)
 
     end
 
-end)
+end)local newAnimationId = "16528092313"
+local animationIds = { "16734584478" }
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local playerGui = player:WaitForChild("PlayerGui")
+local RunService = game:GetService("RunService")
+local SoundService = game:GetService("SoundService")
+
+local cinematicGui = Instance.new("ScreenGui")
+cinematicGui.Name = "CinematicGui"
+cinematicGui.Parent = playerGui
+
+local function createMangaText(parent, text)
+    local billboardGui = Instance.new("BillboardGui")
+    billboardGui.Size = UDim2.new(0, 150, 0, 350) 
+    billboardGui.AlwaysOnTop = true
+    billboardGui.LightInfluence = 0
+    billboardGui.Parent = parent
+
+    local borderFrame = Instance.new("Frame")
+    borderFrame.Size = UDim2.new(1, 0, 1, 0)
+    borderFrame.BackgroundColor3 = Color3.new(1, 1, 1) 
+    borderFrame.BorderSizePixel = 5 
+    borderFrame.BorderColor3 = Color3.new(0, 0, 0)  
+    borderFrame.Parent = billboardGui
+
+    local shadowLabel = Instance.new("TextLabel")
+    shadowLabel.Size = UDim2.new(1, -20, 1, -20) 
+    shadowLabel.Position = UDim2.new(0.5, 2, 0.5, 2) 
+    shadowLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+    shadowLabel.BackgroundTransparency = 1
+    shadowLabel.Text = text
+    shadowLabel.Font = Enum.Font.Arcade
+    shadowLabel.TextSize = 28
+    shadowLabel.TextColor3 = Color3.new(0, 0, 0)  
+    shadowLabel.TextStrokeColor3 = Color3.new(0, 0, 0)
+    shadowLabel.TextStrokeTransparency = 0.7
+    shadowLabel.TextWrapped = true
+    shadowLabel.Parent = borderFrame
+
+    local textLabel = Instance.new("TextLabel")
+    textLabel.Size = UDim2.new(1, -20, 1, -20) 
+    textLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
+    textLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+    textLabel.BackgroundTransparency = 1
+    textLabel.Text = text
+    textLabel.Font = Enum.Font.Arcade
+    textLabel.TextSize = 28
+    textLabel.TextColor3 = Color3.new(0, 0, 0) 
+    textLabel.TextStrokeColor3 = Color3.new(1, 1, 1)
+    textLabel.TextStrokeTransparency = 0
+    textLabel.TextWrapped = true
+    textLabel.Parent = borderFrame
+
+    return billboardGui
+end
+
+local leftText = createMangaText(cinematicGui, "In other words,")
+local rightText = createMangaText(cinematicGui, "In the 45 seconds and 11 milliseconds following an ultimate, Hakari is effectively bannable.")
+
+leftText.Enabled = false
+rightText.Enabled = false
+
+local function updateTextOrientation()
+    local head = character:WaitForChild("Head")
+    leftText.Adornee = head
+    rightText.Adornee = head
+
+    leftText.StudsOffset = Vector3.new(-6, -2, 0)  
+    rightText.StudsOffset = Vector3.new(6, -2, 0) 
+end
+
+RunService.RenderStepped:Connect(updateTextOrientation)
+
+local soundEffect = Instance.new("Sound")
+soundEffect.SoundId = ""
+soundEffect.Name = "NightmodeSound"
+soundEffect.Volume = 15  
+soundEffect.Parent = SoundService
+
+local function showTextsAndPlaySound()
+    leftText.Enabled = true
+    rightText.Enabled = true
+
+    soundEffect:Play()
+
+    task.delay(2, function()
+        leftText.Enabled = false
+        rightText.Enabled = false
+    end)
+end
+
+local function stopAnimations()
+    for _, track in ipairs(humanoid:GetPlayingAnimationTracks()) do
+        if table.find(animationIds, track.Animation.AnimationId:match("%d+$")) then
+            track:Stop()
+        end
+    end
+end
+
+local function playNewAnimation()
+    local animation = Instance.new("Animation")
+    animation.AnimationId = "rbxassetid://" .. newAnimationId
+
+    local animationTrack = humanoid:LoadAnimation(animation)
+    animationTrack:Play()
+    animationTrack:AdjustSpeed(1)
+end
+
+local function onAnimationTrackStarted(track)
+    if table.find(animationIds, track.Animation.AnimationId:match("%d+$")) then
+        stopAnimations()
+        playNewAnimation()
+        showTextsAndPlaySound()
+    end
+end
+
+humanoid.AnimationPlayed:Connect(onAnimationTrackStarted)
