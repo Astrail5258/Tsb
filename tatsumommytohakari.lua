@@ -777,7 +777,7 @@ local animationIdsToStop = {
 
     [16515520431] = true, -- punch(2)
 
-    [16515448089 ] = true, -- punch(3)
+    [16515448089] = true, -- punch(3)
 
     [16552234590] = true, -- punch(4)
 
@@ -787,13 +787,13 @@ local animationIdsToStop = {
 local replacementAnimations = {
 
 
-    ["10469643643"] = "rbxassetid://17889290569",
+    ["16515503507"] = "rbxassetid://17889290569",
 
-    ["10469639222"] = "rbxassetid://17889471098",
+    ["16515520431"] = "rbxassetid://17889471098",
 
-    ["10469630950"] = "rbxassetid://17889461810",
+    ["16515448089"] = "rbxassetid://17889461810",
 
-    ["10469493270"] = "rbxassetid://17889458563",
+    ["16552234590"] = "rbxassetid://17889458563",
 
 }
 
