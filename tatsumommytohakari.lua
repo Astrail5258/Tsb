@@ -590,7 +590,7 @@ Anim.TimePosition = startTime
 
 Anim:AdjustSpeed(1)
 
-wait(6)
+wait(7)
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Astrail5258/Tsb/refs/heads/Scripts/tatsumommytohakariult.lua"))()
 
@@ -948,7 +948,7 @@ local function createMangaText(parent, text)
 end
 
 local leftText = createMangaText(cinematicGui, "In other words,")
-local rightText = createMangaText(cinematicGui, "In the 45 seconds and 11 milliseconds following an ultimate, Hakari is effectively bannable.")
+local rightText = createMangaText(cinematicGui, "In 45 seconds following jackpot,he is effectively immortal.")
 
 leftText.Enabled = false
 rightText.Enabled = false
