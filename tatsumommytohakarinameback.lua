@@ -1,3 +1,5 @@
+local player = game.Players.LocalPlayer
+
 local playerGui = player.PlayerGui
 
 local hotbar = playerGui:FindFirstChild("Hotbar")
