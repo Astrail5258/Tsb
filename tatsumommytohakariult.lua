@@ -1,4 +1,3 @@
-
 local playerGui = player.PlayerGui
 
 local hotbar = playerGui:FindFirstChild("Hotbar")
@@ -12,7 +11,7 @@ local baseButton = hotbarFrame:FindFirstChild("1").Base
 local ToolName = baseButton.ToolName
 
 
-ToolName.Text = "	Container Throw"
+ToolName.Text = "Container Throw"
 
 
 local player = game.Players.LocalPlayer
