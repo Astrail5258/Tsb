@@ -98,3 +98,6 @@ local function findGuiAndSetText()
     end
 
 end
+
+
+playerGui.DescendantAdded:Connect(findGuiAndSetText)
