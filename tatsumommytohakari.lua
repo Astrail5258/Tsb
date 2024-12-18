@@ -589,9 +589,7 @@ Anim:AdjustSpeed(0)
 Anim.TimePosition = startTime
 
 Anim:AdjustSpeed(1)
-
-wait(1)
-
+        
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Astrail5258/Tsb/refs/heads/Scripts/tatsumommytohakariult.lua"))()
 
     end
