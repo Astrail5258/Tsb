@@ -370,7 +370,7 @@ end
 -- FOURTH MOVE
 local AnimAnim = Instance.new("Animation")
 
-AnimAnim.AnimationId = "rbxassetid://12830917034"
+AnimAnim.AnimationId = "rbxassetid://17889080495"
 
 local Anim = Humanoid:LoadAnimation(AnimAnim)
 
@@ -622,65 +622,6 @@ for _, animTrack in pairs(Humanoid:GetPlayingAnimationTracks()) do
 
 end
 
--- dash anim
-local AnimAnim = Instance.new("Animation")
-
-AnimAnim.AnimationId = "rbxassetid://14046756619"
-
-local Anim = Humanoid:LoadAnimation(AnimAnim)
-
-
-local startTime = 0
-
-
-Anim:Play()
-
-Anim:AdjustSpeed(0)
-
-Anim.TimePosition = startTime
-
-Anim:AdjustSpeed(0.7)
-
-
-delay(1.2, function()
-
-    Anim:Stop()
-
-end)
-
-
-    end
-
-end
-
-humanoid.AnimationPlayed:Connect(onAnimationPlayed)
-
-
-local animationId = 10503381238
-
-
-local player = game.Players.LocalPlayer
-
-local character = player.Character or player.CharacterAdded:Wait()
-
-local humanoid = character:WaitForChild("Humanoid")
-
-
-local function onAnimationPlayed(animationTrack)
-
-    if animationTrack.Animation.AnimationId == "rbxassetid://" .. animationId then
-
-local p = game.Players.LocalPlayer
-
-local Humanoid = p.Character:WaitForChild("Humanoid")
-
-
-for _, animTrack in pairs(Humanoid:GetPlayingAnimationTracks()) do
-
-    animTrack:Stop()
-
-end
-
 -- uppercut anim
 local AnimAnim = Instance.new("Animation")
 
@@ -787,13 +728,13 @@ local animationIdsToStop = {
 local replacementAnimations = {
 
 
-    ["16515503507"] = "rbxassetid://17889290569",
+    ["16515503507"] = "rbxassetid://13532562418",
 
-    ["16515520431"] = "rbxassetid://17889471098",
+    ["16515520431"] = "rbxassetid://13532600125",
 
-    ["16515448089"] = "rbxassetid://17889461810",
+    ["16515448089"] = "rbxassetid://13532604085",
 
-    ["16552234590"] = "rbxassetid://17889458563",
+    ["16552234590"] = "rbxassetid://13294471966",
 
 }
 
