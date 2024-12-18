@@ -532,7 +532,7 @@ local startTime = 0
 
 Anim:Play()
 
-Anim:AdjustSpeed(0)
+Anim:AdjustSpeed(0.5)
 
 Anim.TimePosition = startTime
 
@@ -546,7 +546,7 @@ end
 humanoid.AnimationPlayed:Connect(onAnimationPlayed)
 
 
-local animationId = 17464644182 
+local animationId = 17450393107 
 
 
 local player = game.Players.LocalPlayer
