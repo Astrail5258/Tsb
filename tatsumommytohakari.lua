@@ -115,7 +115,7 @@ local baseButton = hotbarFrame:FindFirstChild("3").Base
 local ToolName = baseButton.ToolName
 
 
-ToolName.Text = "Rock Stomp"
+ToolName.Text = "Unlimited Energy Pressure"
 
 
 local player = game.Players.LocalPlayer
