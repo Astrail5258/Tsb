@@ -943,3 +943,46 @@ player.CharacterAdded:Connect(function(newCharacter)
     end
 
 end)
+
+--[[Garou Color Changer !DELETE IF NOT NEEDED!]]
+
+--[[LEFT ARM COLORS]]
+
+local char = game.Players.LocalPlayer.Character
+getgenv().LArmCol = char['Left Arm'].ChildAdded:Connect(function(pp)
+if pp.Name == 'WaterPalm' then
+for i,v in pairs(pp:WaitForChild('ConstantEmit'):GetChildren()) do
+v.Color =
+ColorSequence.new{ColorSequenceKeypoint.new(0.00, 
+Color3.fromRGB(0, 155, 255)), -- Change Color (Red, Green, Blue)
+ColorSequenceKeypoint.new(1.00, 
+Color3.fromRGB(0, 0, 255))} -- Change Color (Red, Green, Blue)
+end
+
+pp:WaitForChild('WaterTrail').Color = 
+ColorSequence.new{ColorSequenceKeypoint.new(0.00, 
+Color3.fromRGB(0, 155, 255)), -- Change Color (Red, Green, Blue)
+ColorSequenceKeypoint.new(1.00, 
+Color3.fromRGB(0, 0, 255))} -- Change Color (Red, Green, Blue)
+
+end end)
+--[[RIGHT ARM colors]]
+
+getgenv().RArmCol = char['Right Arm'].ChildAdded:Connect(function(pp)
+if pp.Name == 'WaterPalm' then
+for i,v in pairs(pp:WaitForChild('ConstantEmit'):GetChildren()) do
+v.Color =
+ColorSequence.new{ColorSequenceKeypoint.new(0.00, 
+Color3.fromRGB(0, 155,255)), -- Change Color (Red, Green, Blue)
+ColorSequenceKeypoint.new(1.00, 
+Color3.fromRGB(0, 0, 255))} -- Change Color (Red, Green, Blue)
+end
+pp:WaitForChild('WaterTrail').Color = 
+ColorSequence.new{ColorSequenceKeypoint.new(0.00, 
+Color3.fromRGB(0, 155, 255)), -- Change Color (Red, Green, Blue) 
+ColorSequenceKeypoint.new(1.00, 
+Color3.fromRGB(0, 0, 255))} -- Change Color (Red, Green, Blue)
+
+end end)
+
+--[[END OF GAROU COLORS]]
